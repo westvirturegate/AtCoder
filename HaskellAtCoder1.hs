@@ -51,5 +51,5 @@ main = do
   print $ palidrome "じてんしゃ"
   print $ palidrome "aaabbbaac"
   print $ palidrome "aba"
-  print $ falselist "meidaiigakuka"
+  print $ falselist "じてんしゃ"
 
