@@ -48,7 +48,7 @@ lastset xs n  =  take (n-1 `div` 2) $ reverse xs
 main = do
   print $ blackjack 1 2 3
   print $ blackjack 12 12 12
-  print $ palidrome "meidaiigakuka"
+  print $ palidrome "じてんしゃ"
   print $ palidrome "aaabbbaac"
   print $ palidrome "aba"
   print $ falselist "meidaiigakuka"
