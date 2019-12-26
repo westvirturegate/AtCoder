@@ -37,19 +37,23 @@ firstlast xs = zip (firstset xs n) (lastset xs n)
   where n = length xs
 
 firstset :: String -> Int -> String
-firstset xs n  = take (n-1 `div` 2) xs
+firstset xs n  = case (odd n) of
+  True -> take (n-1 `div` 2) xs
+  False -> take (n `div` 2) xs
 
 lastset :: String -> Int -> String
-lastset xs n  =  take (n-1 `div` 2) $ reverse xs
-
+lastset xs n  =  case (odd n) of
+  True -> take (n-1 `div` 2) $ reverse xs
+  False -> take (n `div` 2) $ reverse xs
 
 
 
 main = do
   print $ blackjack 1 2 3
   print $ blackjack 12 12 12
+  print $ palidrome "meidaiigakuka"
+  print $ palidrome "aaabbaac"
   print $ palidrome "じてんしゃ"
-  print $ palidrome "aaabbbaac"
-  print $ palidrome "aba"
-  print $ falselist "じてんしゃ"
-
+  print $ falselist "meidaiigakukaa"
+  print $ firstlast "aiueokakia" 
+  print $ falselist "aiueokakia"
